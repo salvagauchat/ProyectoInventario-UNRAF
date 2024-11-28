@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+.derechos{
+  font-style: italic;
+  font-size: small;
+  text-align: center;
+}

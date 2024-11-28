@@ -1,0 +1,30 @@
+
+<h2 class="titulo">Información de la Web / Proyecto</h2>
+<div class="texto">
+  El proyecto que estamos desarrollando es un sistema de gestión de productos de indumentaria que facilita la administración y visualización de un inventario en línea.
+
+  <h3>Backend</h3>
+  El backend está construido en <strong>Python</strong> usando <strong>FastAPI</strong> y se conecta a una base de datos <strong>MongoDB</strong>. Este componente se encarga de manejar las operaciones de creación, lectura, actualización y eliminación (CRUD) de productos, que en este caso representan artículos de ropa. Cada producto tiene las siguientes propiedades:
+  <ul>
+    <li><strong>id</strong>: Identificador único del producto.</li>
+    <li><strong>nombre</strong>: Nombre del producto.</li>
+    <li><strong>precio</strong>: Precio del producto, almacenado como un valor entero.</li>
+    <li><strong>descripcion</strong>: Descripción del producto, que proporciona detalles adicionales.</li>
+    <li><strong>disponible</strong>: Indica la disponibilidad del producto.</li>
+    <li><strong>talle</strong>: Talle del producto.</li>
+    <li><strong>marca</strong>: Marca del producto.</li>
+  </ul>
+  Estas funciones permiten realizar las operaciones necesarias para gestionar el inventario: almacenar un nuevo producto, obtener el listado completo de productos, buscar un producto específico por su id, editar las propiedades de un producto y eliminarlo de la base de datos.
+
+  <h3>Frontend</h3>
+  El frontend, desarrollado en <strong>Angular</strong> y utilizando componentes de <strong>PrimeNG</strong>,
+   consume el backend para mostrar los productos en una interfaz amigable para el usuario.
+    Los productos se muestran en una tabla que permite la visualización y organización del inventario.
+     Además, la interfaz incluye un formulario que permite agregar productos al inventario de forma sencilla.
+      Cada vez que se agrega un producto, este se guarda en un carrito temporal, permitiendo añadir varios productos antes de guardarlos en la base de datos.
+       La aplicación también permite al usuario editar o eliminar productos individuales desde la misma interfaz.
+
+  Este sistema proporciona una solución completa para gestionar productos de indumentaria, facilitando la administración de un inventario de manera eficiente y accesible.
+
+</div>
+

@@ -1,0 +1,4 @@
+
+Tanto en el FE como en el BE se encuentran los README con la informacion correspondiente de sus instalaciones correctas.
+
+*TEMA BASE DE DATOS: Muy probablemente tire error la conexion, tiene que comunicarse con Salvador para que desde el MongoAtlas darle acceso de su IP a la db.

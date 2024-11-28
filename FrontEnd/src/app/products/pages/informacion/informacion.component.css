@@ -1,0 +1,43 @@
+.texto {
+  font-family: 'Arial', sans-serif; /* Tipografía legible */
+  font-size: 16px; /* Tamaño adecuado para lectura */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Texto principal en color gris oscuro */
+  background-color: #e3e6e3f8; /* Fondo claro */
+  border: 1px solid #ddd; /* Borde sutil */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  margin: 20px auto; /* Centrado con márgenes */
+  max-width: 1100px; /* Ancho máximo para buena lectura */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.texto h3 {
+  font-size: 18px; /* Títulos secundarios */
+  font-weight: bold; /* Resaltar títulos */
+  color: #007bff; /* Color azul para destacar */
+  margin-top: 20px; /* Espaciado antes del título */
+}
+
+.texto ul {
+  margin: 15px 0; /* Espaciado en listas */
+  padding-left: 20px; /* Sangría para viñetas */
+}
+
+.texto ul li {
+  list-style-type: disc; /* Viñetas estilo disco */
+  margin-bottom: 10px; /* Espaciado entre elementos */
+}
+
+.texto strong {
+  color: #0056b3; /* Texto destacado en azul oscuro */
+  font-weight: bold; /* Negrita */
+}
+
+.texto p {
+  margin-bottom: 15px; /* Separación entre párrafos */
+}
+
+.titulo{
+  text-align: center;
+}

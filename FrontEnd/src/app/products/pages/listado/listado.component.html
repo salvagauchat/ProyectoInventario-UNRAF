@@ -1,0 +1,61 @@
+<div class="section">
+  <h3 class="titulo">Listado de Productos </h3>
+  <div class="tabla">
+    <p-table
+        #dt2
+        [value]="productos"
+        dataKey="id"
+        [rows]="10"
+        [rowsPerPageOptions]="[10, 25, 50]"
+        [paginator]="true"
+        [globalFilterFields]="['nombre', 'descripcion', 'precio', 'talle']"
+        [tableStyle]="{ 'min-width': '75rem' }"
+    >
+
+    <!-- Encabezados de columna -->
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width:20%">Nombre</th>
+            <th style="width:20%">Descripción</th>
+            <th style="width:10%">Precio</th>
+            <th style="width:5%">Stock</th>
+            <th style="width:5%">Talle</th>
+            <th style="width:10%">Marca</th>
+            <th style="width:5%">Acciones</th>
+        </tr>
+    </ng-template>
+
+    <!-- Cuerpo de la tabla donde mostramos cada producto -->
+    <ng-template pTemplate="body" let-producto>
+        <tr>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.descripcion }}</td>
+            <td>{{ producto.precio | currency }}</td> <!-- el currrency es un pipe de angualer permite mostrar el formato moneda -->
+            <td>
+                <i class="pi"
+                   [ngClass]="{ 'text-green-500 pi-check-circle': producto.disponible, 'text-red-500 pi-times-circle': !producto.disponible }"></i>
+            </td>
+            <td>{{ producto.talle }}</td>
+            <td>{{ producto.marca }}</td>
+            <td>
+              <div class="botones">
+                  <p-button label="Editar" severity="help" (onClick)="editarProducto(producto._id)"></p-button>
+                  <p-toast></p-toast>
+
+                  <p-button (onClick)="confirm2($event, producto._id)" label="Eliminar" severity="danger" [outlined]="true"></p-button>
+              </div>
+          </td>
+        </tr>
+    </ng-template>
+
+    <!-- Mensaje en caso de que no haya productos -->
+    <ng-template pTemplate="emptymessage">
+        <tr>
+            <td colspan="6">No se encontraron productos.</td>
+        </tr>
+    </ng-template>
+    </p-table>
+  </div>
+</div>
+
+<p-confirmDialog></p-confirmDialog>

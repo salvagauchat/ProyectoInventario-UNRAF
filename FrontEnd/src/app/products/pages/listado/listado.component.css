@@ -1,0 +1,46 @@
+.tabla{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.botones{
+  display: flex;
+}
+
+.botones p-button{
+  padding: 5px;
+}
+td{
+  text-align: center;
+}
+
+th{
+  text-align: center;
+}
+
+.section{
+  position: relative;
+  border: 1px rgba(255, 255, 255, 0.493) solid;
+  padding: 20px 5px;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titulo{
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  top: -33px;
+  color: rgb(255, 255, 255);
+  padding: 3px 10px;
+  background-color: #121212ff;
+}
+
+.pi-check-circle:before {
+  color: rgb(36, 160, 36);
+}
+
+.pi-times-circle:before {
+  color: red;
+}

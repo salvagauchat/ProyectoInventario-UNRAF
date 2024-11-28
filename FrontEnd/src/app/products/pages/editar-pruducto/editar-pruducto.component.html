@@ -1,0 +1,96 @@
+<div class="section">
+  <h3 class="titulo">Editar Producto</h3>
+
+  <form
+    [formGroup]="productoForm"
+    class="animate__animated animate__fadeIn"
+    (ngSubmit)="editarProducto()"
+  >
+    <div class="inputs">
+
+      <div class="divFlex">
+        <div>
+          <span class="p-float-label">
+            <input
+              [ngClass]="isValidField('nombre') ? 'ng-invalid ng-dirty' : ''"
+              pInputText
+              formControlName="nombre"
+            />
+            <label htmlFor="nombre">Nombre del Producto: </label>
+          </span>
+        </div>
+      </div>
+
+      <!-- Campo Descripción -->
+      <div class="divFlex">
+        <div>
+          <span class="p-float-label">
+            <input
+              [ngClass]="isValidField('descripcion') ? 'ng-invalid ng-dirty' : ''"
+              pInputText
+              formControlName="descripcion"
+            />
+            <label htmlFor="descripcion">Descripción: </label>
+          </span>
+        </div>
+      </div>
+      <!-- Campo Precio -->
+      <div class="divFlex">
+        <div>
+          <span class="p-float-label">
+            <input
+              type="number"
+              [ngClass]="isValidField('precio') ? 'ng-invalid ng-dirty' : ''"
+              pInputText
+              formControlName="precio"
+            />
+            <label htmlFor="precio">Precio: </label>
+          </span>
+        </div>
+      </div>
+      <!-- Campo Talle -->
+      <div class="divFlex">
+        <div>
+          <span class="p-float-label">
+            <input
+              [ngClass]="isValidField('talle') ? 'ng-invalid ng-dirty' : ''"
+              pInputText
+              formControlName="talle"
+            />
+            <label htmlFor="talle">Talle: </label>
+          </span>
+        </div>
+      </div>
+      <!-- Campo Marca -->
+      <div class="divFlex">
+        <div>
+          <span class="p-float-label">
+            <input
+              [ngClass]="isValidField('marca') ? 'ng-invalid ng-dirty' : ''"
+              pInputText
+              formControlName="marca"
+            />
+            <label htmlFor="marca">Marca: </label>
+          </span>
+        </div>
+      </div>
+      <!-- Campo Disponible -->
+      <div class="divFlex">
+        <div>
+          <p-checkbox
+            formControlName="disponible"
+            binary="true"
+            label="Disponible">
+          </p-checkbox>
+        </div>
+      </div>
+
+      <div class="divFlex">
+        <button type="submit" pButton label="Guardar Cambios"></button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<p-toast></p-toast>
+

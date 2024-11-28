@@ -1,0 +1,103 @@
+.section{
+  position: relative;
+  border: 1px rgba(255, 255, 255, 0.493) solid;
+  padding: 20px 5px;
+  border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titulo{
+  position: absolute;
+  font-family: 'Inter', sans-serif;
+  top: -33px;
+  color: rgb(255, 255, 255);
+  padding: 3px 10px;
+  background-color: #121212ff;
+}
+
+/* formulario */
+
+form{
+  position: relative;
+  margin: 30px 0px 10px 0px;
+  border: 1px solid var(--azul-claro);
+  padding: 50px 12px 25px 12px;
+  border-radius: 5px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 13px;
+}
+
+.divFlex span{
+  margin-left: 10px;
+}
+
+.p-inputtext{
+  width: 20vw;
+}
+
+textarea{
+  width: 20vw;
+  background-color: #111827ff;
+  border-radius: 5px;
+  border-color: rgb(109, 109, 109);
+}
+.divFlex {
+  margin-bottom: 15px;
+}
+
+.form-y-lista {
+  display: flex;
+  justify-content: space-around;
+}
+
+.lista-carrito {
+  width: 30vw;
+}
+
+.carrito-item {
+  display: flex;
+  justify-content: space-between; /* Mantiene el texto y el botón separados */
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.carrito-item span {
+  flex: 1; /* El texto ocupará todo el espacio disponible */
+}
+
+.crear-button {
+  margin-left: auto; /* Empuja el botón completamente hacia la derecha */
+  text-align: right;
+}
+
+.btns ::ng-deep .p-button.p-button-success, .p-button-group.p-button-success > .p-button, .p-splitbutton.p-button-success > .p-button{
+  margin-right: 10px;
+}
+
+.mensaje-vacio {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 769px){
+  .inputs{
+      flex-direction: column;
+      width: 60vw;
+      margin: auto;
+  }
+}

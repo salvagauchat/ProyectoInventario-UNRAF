@@ -1,0 +1,14 @@
+:host {
+  display: block;
+}
+
+.titulo{
+  text-align: center;
+  background-color: #374151;
+  padding: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
+  border-radius: 5px;
+
+}
+

@@ -1,0 +1,111 @@
+<div class="section">
+  <h3 class="titulo">Crear Productos</h3>
+
+  <div class="form-y-lista">
+    <!-- Formulario -->
+    <form [formGroup]="productoForm" class="animate__animated animate__fadeIn" (ngSubmit)="agregarProducto()">
+      <!-- Campos del formulario -->
+      <div class="inputs">
+        <!-- Campo Nombre -->
+        <div class="divFlex">
+          <div>
+            <span class="p-float-label">
+              <input
+                [ngClass]="isValidField('nombre') ? 'ng-invalid ng-dirty' : ''"
+                pInputText
+                formControlName="nombre"
+              />
+              <label htmlFor="nombre">Nombre del Producto: </label>
+            </span>
+          </div>
+        </div>
+
+        <!-- Campo Descripción -->
+        <div class="divFlex">
+          <div>
+            <span class="p-float-label">
+              <input
+                [ngClass]="isValidField('descripcion') ? 'ng-invalid ng-dirty' : ''"
+                pInputText
+                formControlName="descripcion"
+              />
+              <label htmlFor="descripcion">Descripción: </label>
+            </span>
+          </div>
+        </div>
+        <!-- Campo Precio -->
+        <div class="divFlex">
+          <div>
+            <span class="p-float-label">
+              <input
+                type="number"
+                [ngClass]="isValidField('precio') ? 'ng-invalid ng-dirty' : ''"
+                pInputText
+                formControlName="precio"
+              />
+              <label htmlFor="precio">Precio: </label>
+            </span>
+          </div>
+        </div>
+        <!-- Campo Talle -->
+        <div class="divFlex">
+          <div>
+            <span class="p-float-label">
+              <input
+                [ngClass]="isValidField('talle') ? 'ng-invalid ng-dirty' : ''"
+                pInputText
+                formControlName="talle"
+              />
+              <label htmlFor="talle">Talle: </label>
+            </span>
+          </div>
+        </div>
+        <!-- Campo Marca -->
+        <div class="divFlex">
+          <div>
+            <span class="p-float-label">
+              <input
+                [ngClass]="isValidField('marca') ? 'ng-invalid ng-dirty' : ''"
+                pInputText
+                formControlName="marca"
+              />
+              <label htmlFor="marca">Marca: </label>
+            </span>
+          </div>
+        </div>
+        <!-- Botón para agregar producto -->
+        <div class="divFlex">
+          <button type="submit" pButton label="Agregar al Carrito"></button>
+        </div>
+      </div>
+    </form>
+
+    <!-- Listado de productos en el carrito -->
+    <div class="lista-carrito">
+      <h4 style="text-align: center;">Productos en el Carrito</h4>
+
+        <!-- Mostrar mensaje si el carrito está vacío -->
+      <div *ngIf="carrito.length === 0" class="mensaje-vacio">
+        <p>No hay productos en el carrito.</p>
+      </div>
+      <p-listbox
+        *ngIf="carrito.length > 0"
+        [options]="carrito"
+        [style]="{'width':'100%'}"
+        [listStyle]="{'max-height': '220px'}">
+        <ng-template let-producto pTemplate="item">
+          <div class="carrito-item">
+            <span>{{ producto.nombre | titlecase}} - {{producto.marca | titlecase}} - {{producto.talle | titlecase}} - {{producto.precio | currency}}</span>
+          </div>
+          <div class="crear-button">
+          <p-button label="Crear" severity="success" class="btns" (click)="crearProducto(producto, carrito.indexOf(producto))"/>
+          <p-button label="Danger" severity="danger" label="Eliminar" (click)="eliminarProducto(producto)" />
+          </div>
+        </ng-template>
+      </p-listbox>
+    </div>
+
+  </div>
+  <p-toast></p-toast>
+
+
