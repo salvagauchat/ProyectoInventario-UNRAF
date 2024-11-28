@@ -1,11 +1,14 @@
-GUIA DE PASOS DEL PROYECTO.
+## Guía de Pasos del Proyecto
 
-BackEnd:
-	1 - INSTALACION DE PYTHON: https://www.python.org/downloads/windows/ (marcamos los dos checks)
-	2 - INSTALAMOS la extencion de Python en el VScode.
-	3 - Clonar el repositorio o descargarlo proyecto.
-	4 - Posicionarse en la carpeta BackEnd.
-	5 - Instalar las dependencias del requirements.txt con el comando: pip install -r requirements.txt
-	6 - Iniciar servidor con el comando: uvicorn app:app --reload
+### BackEnd
 
-*Importante, si la conexion a la db no funciona es porque hace falta validar la IP desde donde se intenta conectar en la base de datos.
+#### Instalación
+1. **Python:** Descarga desde https://www.python.org/downloads/windows/.
+2. **VS Code:** Instala la extensión de Python.
+3. **Clonar:** `git clone https://tu_repositorio.git`
+4. **Acceder:** `cd tu_proyecto/Backend`
+5. **Dependencias:** `pip install -r requirements.txt`
+6. **Iniciar:** `uvicorn app:app --reload`
+
+#### Conexión a la Base de Datos
+* **Verificar IP:** Asegúrate que la IP esté permitida en la configuración de la base de datos.
